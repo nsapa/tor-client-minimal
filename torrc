@@ -1,18 +1,21 @@
 ## The directory for keeping all the keys/etc
 DataDirectory /var/lib/tor
 
-## Tor opens a socks proxy on port 9150
-SocksPort 0.0.0.0:9150
+## Tor opens a socks proxy on port 9050
+SocksPort 0.0.0.0:9050
 
 ## Entry policies to allow/deny SOCKS requests based on IP address.
 ## SocksPolicy accept 192.168.1.0/24
-SocksPolicy accept 172.17.0.0/16
+SocksPolicy accept 192.168.0.0/16
+SocksPolicy accept 172.16.0.0/12
+SocksPolicy accept 10.0.0.0/8
+SocksPolicy accept 127.0.0.0/8
 SocksPolicy reject *
 
 ## Logs go to stdout at level "notice"
 Log notice stdout
 
-ControlPort 9051
+ControlPort 0.0.0.0:9051
 
 # Try for at most NUM seconds when building circuits. If the circuit isn't open in that time, give up on it. (Default: 1 minute.)           
 CircuitBuildTimeout 5                                                                                                                       
