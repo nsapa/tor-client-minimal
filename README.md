@@ -1,4 +1,5 @@
 # tor-client-minimal
+[![Docker Image CI](https://github.com/nsapa/tor-client-minimal/actions/workflows/docker-image.yml/badge.svg)](https://github.com/nsapa/tor-client-minimal/actions/workflows/docker-image.yml)
 
 Tor client (Socks proxy ) image - Tor client image qualified for Docker. This Docker image launch a Tor client with a Socks proxy on port 9050 (SocksPort 0.0.0.0:9050).
 
